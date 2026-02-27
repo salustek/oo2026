@@ -1,25 +1,27 @@
-package ee.skev.veebipood.entity;
+package ee.skev.decathlon.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
+public class Sportlane {
 
-public class Movie {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String name;
-    private String genre;
-    private String length;
+
+    @OneToMany(mappedBy = "sportlane", cascade = CascadeType.ALL)
+    private List<Tulemus> tulemused;
+
 }

@@ -1,0 +1,57 @@
+package ee.skev.veebipood.service;
+
+import ee.skev.veebipood.dto.OrderRowDto;
+import ee.skev.veebipood.entity.Order;
+import ee.skev.veebipood.entity.OrderRow;
+import ee.skev.veebipood.entity.Person;
+import ee.skev.veebipood.entity.Product;
+import ee.skev.veebipood.repository.OrderRepository;
+import ee.skev.veebipood.repository.PersonRepository;
+import ee.skev.veebipood.repository.ProductRepository;
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+@Service
+@AllArgsConstructor
+public class OrderService {
+
+    // @Autowired --> Dependency Injection
+    // @RequiredArgConstructor --> Dependency Injection
+
+    // tagataustal tõmmatakse sisse tema mälukohaga
+
+    private OrderRepository orderRepository;
+    private PersonRepository personRepository;
+    private ProductRepository productRepository;
+
+    public Order saveOrder(Long personId, String parcelMachine, List<OrderRowDto> orderRows) {
+        Order order = new Order();
+        order.setCreated(new Date()); // import ka
+        order.setParcelMachine(parcelMachine);
+//        order.setOrderRows(orderRows);
+        Person person = personRepository.findById(personId).orElseThrow(); // kui isikut ei leia --> exception
+        order.setPerson(person);
+        order.setTotal(calculateOrderTotal(orderRows, order));
+        return orderRepository.save(order);
+    }
+
+    private double calculateOrderTotal(List<OrderRowDto> orderRows, Order order) {
+        double total = 0;
+        List<OrderRow> orderRowsInOrder = new ArrayList<>();
+        for (OrderRowDto orderRowDto : orderRows) {
+            Product product = productRepository.findById(orderRowDto.productId()).orElseThrow();
+            total += product.getPrice() * orderRowDto.quantity();
+
+            OrderRow orderRowInOrder = new OrderRow();
+            orderRowInOrder.setProduct(product);
+            orderRowInOrder.setQuantity(orderRowDto.quantity());
+            orderRowsInOrder.add(orderRowInOrder);
+        }
+        order.setOrderRows(orderRowsInOrder);
+        return total;
+    }
+}

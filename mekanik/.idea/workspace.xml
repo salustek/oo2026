@@ -5,36 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b41320d8-d986-4fa5-9b13-4c1a47a722b3" name="Changes" comment="270226">
-      <change beforePath="$PROJECT_DIR$/../decathlon/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../decathlon/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../decathlon/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../decathlon/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../decathlon/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../decathlon/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../decathlon/src/main/java/ee/skev/decathlon/DecathlonApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../decathlon/src/main/java/ee/skev/decathlon/controller/SportlaneController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../decathlon/src/main/java/ee/skev/decathlon/entity/Sportlane.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../decathlon/src/main/java/ee/skev/decathlon/entity/Tulemus.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../decathlon/src/main/java/ee/skev/decathlon/repository/SportlaneRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../decathlon/src/main/java/ee/skev/decathlon/repository/TulemusRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../decathlon/src/main/java/ee/skev/decathlon/service/SportlaneService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../decathlon/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../decathlon/src/test/java/ee/skev/decathlon/DecathlonApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../filmid/src/main/java/ee/skev/filmid/controller/MovieController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../filmid/src/main/java/ee/skev/filmid/entity/Movie.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../filmid/src/main/java/ee/skev/filmid/repository/MovieRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ee/skev/mekanik/MekanikApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ee/skev/mekanik/controller/CarController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ee/skev/mekanik/entity/Car.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ee/skev/mekanik/repository/CarRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ee/skev/mekanik/MekanikApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,6 +90,8 @@
       <workItem from="1772182722486" duration="971000" />
       <workItem from="1772183933626" duration="446000" />
       <workItem from="1772187009684" duration="118000" />
+      <workItem from="1772187153030" duration="598000" />
+      <workItem from="1772187974687" duration="191000" />
     </task>
     <task id="LOCAL-00001" summary="270226">
       <option name="closed" value="true" />

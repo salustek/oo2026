@@ -1,4 +1,5 @@
 package ee.skev.rentalstore.entity;
 
-public class FilmType {
+public enum FilmType {
+    NEW, REGULAR, OLD
 }

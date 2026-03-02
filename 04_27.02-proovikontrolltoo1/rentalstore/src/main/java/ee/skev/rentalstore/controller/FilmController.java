@@ -3,6 +3,7 @@ package ee.skev.rentalstore.controller;
 import ee.skev.rentalstore.dto.FilmSaveDto;
 import ee.skev.rentalstore.entity.Film;
 import ee.skev.rentalstore.entity.FilmType;
+import ee.skev.rentalstore.repository.FilmRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

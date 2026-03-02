@@ -1,4 +1,9 @@
 package ee.skev.rentalstore.dto;
 
-public class FilmSaveDto {
+import ee.skev.rentalstore.entity.FilmType;
+
+public record FilmSaveDto(
+        String title,
+        FilmType type
+) {
 }

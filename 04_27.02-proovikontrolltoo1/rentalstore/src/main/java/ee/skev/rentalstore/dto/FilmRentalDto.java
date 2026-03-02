@@ -1,4 +1,7 @@
 package ee.skev.rentalstore.dto;
 
-public class FilmRentalDto {
+public record FilmRentalDto(
+        Long filmId,
+        int days
+) {
 }

@@ -34,7 +34,6 @@ public class RentalController {
         Rental dbRental = rentalRepository.save(rental); // {id: 2, initialFee: null, lateFee: null}
 
         double sum = 0;
-        // mis tüüp       muutuja          mida läbi käin
         for (FilmRentalDto filmRentalDto : filmRentalDtos) {
             Film dbFilm = filmRepository.findById(filmRentalDto.filmId()).orElseThrow();
             dbFilm.setRental(dbRental);

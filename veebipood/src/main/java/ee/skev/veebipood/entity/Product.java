@@ -29,14 +29,4 @@ public class Product {
     @ManyToOne
     private Category category; // automaatselt võõrvõtmega (@Id väljaga) siia tabelisse
 
-    // Panen andmebaasi, aga ei määra seda väärtust:
-    // double -> 0
-    // boolean -> false
-    // int -> 0
-
-    // Panen andmebaasi, aga ei määra seda väärtust:
-    // Double -> null
-    // Boolean -> null
-    // Integer -> null
-
 }

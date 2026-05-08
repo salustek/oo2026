@@ -1,4 +1,4 @@
-package ee.mihkel.veebipood.exception;
+package ee.skev.veebipood.exception;
 
 import lombok.Data;
 

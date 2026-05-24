@@ -8,6 +8,10 @@ import ee.skev.decathlon.repository.SpordialaRepository;
 import ee.skev.decathlon.repository.SportlaneRepository;
 import ee.skev.decathlon.repository.TulemusRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -27,7 +31,22 @@ public class TulemusController {
 
 
     @GetMapping("tulemused")
-    public List<Tulemus> getTulemused() { return tulemusRepository.findAll(); }
+    public Page<Tulemus> getTulemused(
+            @RequestParam(defaultValue = "0") int page,
+            @RequestParam(defaultValue = "10") int size,
+            @RequestParam(required = false) Long spordialaId,
+            @RequestParam(defaultValue = "desc") String sortDir) {
+
+        Sort sort = sortDir.equals("asc")
+                ? Sort.by("punktid").ascending()
+                : Sort.by("punktid").descending();
+        Pageable pageable = PageRequest.of(page, size, sort);
+
+        if (spordialaId != null) {
+            return tulemusRepository.findBySpordialaId(spordialaId, pageable);
+        }
+        return tulemusRepository.findAll(pageable);
+    }
 
     @PostMapping("add-tulemus")
     public Tulemus addTulemus(@RequestBody Tulemus tulemus){

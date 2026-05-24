@@ -20,14 +20,14 @@ import java.util.List;
 
         @DeleteMapping("categories/{id}")
         public List<Category> deleteCategory(@PathVariable Long id){
-            categoryRepository.deleteById(id); // kustutan
-            return categoryRepository.findAll(); // uuenenud seis
+            categoryRepository.deleteById(id);
+            return categoryRepository.findAll();
         }
 
         @PostMapping("categories")
         public List<Category> addCategory(@RequestBody Category category){
-            categoryRepository.save(category); // siin salvestab
-            return categoryRepository.findAll(); // siin on uuenenud seis
+            categoryRepository.save(category);
+            return categoryRepository.findAll();
         }
 
     }

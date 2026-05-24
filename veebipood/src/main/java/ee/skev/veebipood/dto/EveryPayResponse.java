@@ -16,7 +16,7 @@ public class EveryPayResponse {
     private double initial_amount;
     private double standing_amount;
     private String payment_reference;
-    private String payment_link; // <-----------------------------------------------
+    private String payment_link;
     private ArrayList<Object> payment_methods;
     private String api_username;
     private Object warnings;
